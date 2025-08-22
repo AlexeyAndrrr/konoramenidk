@@ -457,6 +457,30 @@ body {
     max-width: 400px;
 }
 
+/* Секция с изображением филиала */
+.storefront-section {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.storefront-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border: 2px solid red; /* Временная рамка для отладки */
+}
+
+.storefront-caption {
+    font-family: 'BlackerSans Pro', sans-serif;
+    font-size: 1.4rem;
+    color: var(--kono-blue);
+    font-weight: 600;
+    margin: 0;
+}
+
 .section:nth-child(even) {
     background: var(--kono-light-yellow);
 }
@@ -748,6 +772,15 @@ body {
     .about-image {
         flex: none;
         max-width: 450px;
+    }
+    
+    /* Адаптивность для изображения филиала */
+    .storefront-image {
+        max-width: 100%;
+    }
+    
+    .storefront-caption {
+        font-size: 1.2rem;
     }
 }
 
