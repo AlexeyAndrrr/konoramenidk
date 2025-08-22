@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы - KONO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pribambas&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="reviews.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <div class="logo-icon">
+                        <img src="images/logo.png" alt="KONO" class="logo-image">
+                    </div>
+                </a>
+            </div>
+            <nav class="nav">
+                <a href="menu.html" class="nav-link">Меню</a>
+                <a href="reviews.html" class="nav-link active">Отзывы</a>
+                <a href="https://pay.sbtips.ru/t/1000022100" class="nav-link" target="_blank" rel="noopener noreferrer">Чаевые</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Reviews Hero -->
+    <section class="reviews-hero">
+        <div class="container">
+            <h1 class="reviews-title">Отзывы наших гостей</h1>
+            <p class="reviews-subtitle">Поделитесь своими впечатлениями о KONO</p>
+        </div>
+    </section>
+
+    <!-- Branch Selection for Reviews -->
+    <section class="branch-selection-reviews">
+        <div class="container">
+            <h2 class="branch-title">Выберите филиал для отзыва</h2>
+            <div class="branch-grid">
+                <div class="branch-card" data-branch="1">
+                    <div class="branch-icon">🏪</div>
+                    <h3>KONO Центр</h3>
+                    <p>ул. Главная, 123</p>
+                </div>
+                <div class="branch-card" data-branch="2">
+                    <div class="branch-icon">🏪</div>
+                    <h3>KONO Север</h3>
+                    <p>пр. Северный, 45</p>
+                </div>
+                <div class="branch-card" data-branch="3">
+                    <div class="branch-icon">🏪</div>
+                    <h3>KONO Юг</h3>
+                    <p>ул. Южная, 67</p>
+                </div>
+                <div class="branch-card" data-branch="4">
+                    <div class="branch-icon">🏪</div>
+                    <h3>KONO Запад</h3>
+                    <p>ул. Западная, 89</p>
+                </div>
+                <div class="branch-card" data-branch="5">
+                    <div class="branch-icon">🏪</div>
+                    <h3>KONO Восток</h3>
+                    <p>пр. Восточный, 12</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Write Review Section -->
+    <section class="write-review" id="write-review-section" style="display: none;">
+        <div class="container">
+            <h2 class="write-review-title">Написать отзыв</h2>
+            <form class="review-form" id="review-form">
+                <div class="form-group">
+                    <label for="reviewer-name">Ваше имя</label>
+                    <input type="text" id="reviewer-name" name="name" required placeholder="Введите ваше имя">
+                </div>
+                
+                <div class="form-group">
+                    <label for="review-rating">Оценка</label>
+                    <div class="rating-stars">
+                        <input type="radio" id="star5" name="rating" value="5" required>
+                        <label for="star5">★</label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4">★</label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3">★</label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2">★</label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1">★</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="review-text">Ваш отзыв</label>
+                    <textarea id="review-text" name="text" required placeholder="Поделитесь своими впечатлениями..." rows="4"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="review-branch">Филиал</label>
+                    <select id="review-branch" name="branch" required>
+                        <option value="">Выберите филиал</option>
+                        <option value="1">KONO Центр</option>
+                        <option value="2">KONO Север</option>
+                        <option value="3">KONO Юг</option>
+                        <option value="4">KONO Запад</option>
+                        <option value="5">KONO Восток</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="submit-review-btn">Отправить отзыв</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Reviews Display -->
+    <section class="reviews-display">
+        <div class="container">
+            <div class="reviews-header">
+                <h2 class="reviews-display-title">Отзывы о филиале</h2>
+                <button class="write-review-btn" id="show-review-form">Написать отзыв</button>
+            </div>
+            
+            <div class="reviews-list" id="reviews-list">
+                <!-- Sample reviews will be loaded here -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">👤</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Анна</h4>
+                                <div class="review-rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <div class="review-date">2 дня назад</div>
+                    </div>
+                    <div class="review-content">
+                        <p>Отличный ресторан! Блюда очень вкусные, атмосфера уютная. Обязательно вернусь снова!</p>
+                    </div>
+                    <div class="review-branch">
+                        <span>Филиал: KONO Центр</span>
+                    </div>
+                </div>
+                
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">👤</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Михаил</h4>
+                                <div class="review-rating">★★★★☆</div>
+                            </div>
+                        </div>
+                        <div class="review-date">1 неделю назад</div>
+                    </div>
+                    <div class="review-content">
+                        <p>Хорошая еда, но долго готовили. Персонал вежливый, порции большие.</p>
+                    </div>
+                    <div class="review-branch">
+                        <span>Филиал: KONO Север</span>
+                    </div>
+                </div>
+                
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">👤</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Елена</h4>
+                                <div class="review-rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <div class="review-date">2 недели назад</div>
+                    </div>
+                    <div class="review-content">
+                        <p>Потрясающий рамен! Самый вкусный в городе. Атмосфера как в Японии.</p>
+                    </div>
+                    <div class="review-branch">
+                        <span>Филиал: KONO Юг</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="no-reviews" id="no-reviews" style="display: none;">
+                <div class="no-reviews-content">
+                    <div class="no-reviews-icon">💬</div>
+                    <h3>Пока нет отзывов</h3>
+                    <p>Будьте первым, кто оставит отзыв об этом филиале!</p>
+                    <button class="write-review-btn" onclick="showReviewForm()">Написать отзыв</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Home -->
+    <section class="back-home">
+        <div class="container">
+            <a href="index.html" class="back-btn">
+                <span>←</span> Вернуться на главную
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-icon small">
+                        <img src="images/logo.png" alt="KONO" class="logo-image">
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <a href="menu.html">Меню</a>
+                    <a href="reviews.html">Отзывы</a>
+                    <a href="https://pay.sbtips.ru/t/1000022100" target="_blank" rel="noopener noreferrer">Чаевые</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 KONO. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="reviews.js"></script>
+</body>
+</html>

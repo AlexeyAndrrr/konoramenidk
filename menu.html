@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню - KONO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pribambas&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <div class="logo-icon">
+                        <img src="images/logo.png" alt="KONO" class="logo-image">
+                    </div>
+                </a>
+            </div>
+            <nav class="nav">
+                <a href="menu.html" class="nav-link active">Меню</a>
+                <a href="reviews.html" class="nav-link">Отзывы</a>
+                <a href="https://pay.sbtips.ru/t/1000022100" class="nav-link" target="_blank" rel="noopener noreferrer">Чаевые</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Menu Hero -->
+    <section class="menu-hero">
+        <div class="container">
+            <h1 class="menu-title">Наше меню</h1>
+            <p class="menu-subtitle">Откройте для себя вкусные блюда KONO</p>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters">
+        <div class="container">
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-category="all">Все блюда</button>
+                <button class="filter-tab" data-category="ramen">Рамен</button>
+                <button class="filter-tab" data-category="appetizers">Закуски</button>
+                <button class="filter-tab" data-category="drinks">Напитки</button>
+                <button class="filter-tab" data-category="new">Новинки</button>
+            </div>
+            
+            <div class="filter-options">
+                <div class="spice-filter">
+                    <label>Острота:</label>
+                    <select id="spice-level">
+                        <option value="all">Любая</option>
+                        <option value="mild">Мягкая</option>
+                        <option value="medium">Средняя</option>
+                        <option value="hot">Острая</option>
+                        <option value="extreme">Экстремальная</option>
+                    </select>
+                </div>
+                
+                <div class="price-filter">
+                    <label>Цена:</label>
+                    <select id="price-range">
+                        <option value="all">Любая</option>
+                        <option value="low">До 300₽</option>
+                        <option value="medium">300₽ - 600₽</option>
+                        <option value="high">От 600₽</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Grid -->
+    <section class="menu-grid">
+        <div class="container">
+            <div class="menu-items" id="menu-items">
+                <!-- Ramen Items -->
+                <div class="menu-item" data-category="ramen" data-spice="hot" data-price="medium" data-new="false">
+                    <div class="item-image">
+                        <img src="https://via.placeholder.com/300x200/E85C1C/FFFFFF?text=Булдак+Рамен" alt="Булдак Рамен">
+                        <div class="item-badge spicy">🔥 Острый</div>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">Булдак Рамен</h3>
+                        <p class="item-description">Классический острый рамен с курицей, овощами и яйцом</p>
+                        <div class="item-meta">
+                            <span class="item-spice">🔥🔥🔥</span>
+                            <span class="item-price">450₽</span>
+                        </div>
+                        <button class="order-btn">Заказать</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="ramen" data-spice="mild" data-price="medium" data-new="false">
+                    <div class="item-image">
+                        <img src="https://via.placeholder.com/300x200/1F4D91/FFFFFF?text=Мисо+Рамен" alt="Мисо Рамен">
+                        <div class="item-badge">Мягкий</div>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">Мисо Рамен</h3>
+                        <p class="item-description">Традиционный японский рамен с мисо бульоном и свининой</p>
+                        <div class="item-meta">
+                            <span class="item-spice">🔥</span>
+                            <span class="item-price">380₽</span>
+                        </div>
+                        <button class="order-btn">Заказать</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="ramen" data-spice="extreme" data-price="high" data-new="true">
+                    <div class="item-image">
+                        <img src="https://via.placeholder.com/300x200/FF5722/FFFFFF?text=2X+Спайси" alt="2X Спайси Рамен">
+                        <div class="item-badge new spicy">🆕 Экстремально</div>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">2X Спайси Рамен</h3>
+                        <p class="item-description">Для настоящих ценителей остроты! Двойная порция специй</p>
+                        <div class="item-meta">
+                            <span class="item-spice">🔥🔥🔥🔥🔥</span>
+                            <span class="item-price">650₽</span>
+                        </div>
+                        <button class="order-btn">Заказать</button>
+                    </div>
+                </div>
+
+                <!-- Appetizers -->
+                <div class="menu-item" data-category="appetizers" data-spice="mild" data-price="low" data-new="false">
+                    <div class="item-image">
+                        <img src="https://via.placeholder.com/300x200/4CAF50/FFFFFF?text=Гёдза" alt="Гёдза">
+                        <div class="item-badge">Закуска</div>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">Гёдза</h3>
+                        <p class="item-description">Пельмени с начинкой из свинины и овощей</p>
+                        <div class="item-meta">
+                            <span class="item-spice">🔥</span>
+                            <span class="item-price">280₽</span>
+                        </div>
+                        <button class="order-btn">Заказать</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="appetizers" data-spice="medium" data-price="low" data-new="false">
+                    <div class="item-image">
+                        <img src="https://via.placeholder.com/300x200/FF9800/FFFFFF?text=Такояки" alt="Такояки">
+                        <div class="item-badge">Закуска</div>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">Такояки</h3>
+                        <p class="item-description">Шарики из теста с осьминогом и соусом</p>
+                        <div class="item-meta">
+                            <span class="item-spice">🔥🔥</span>
+                            <span class="item-price">320₽</span>
+                        </div>
+                        <button class="order-btn">Заказать</button>
+                    </div>
+                </div>
+
+                <!-- Drinks -->
+                <div class="menu-item" data-category="drinks" data-spice="mild" data-price="low" data-new="false">
+                    <div class="item-image">
+                        <img src="https://via.placeholder.com/300x200/9C27B0/FFFFFF?text=Боба+Чай" alt="Боба Чай">
+                        <div class="item-badge">Напиток</div>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">Боба Чай</h3>
+                        <p class="item-description">Молочный чай с жемчужинами тапиоки</p>
+                        <div class="item-meta">
+                            <span class="item-spice">-</span>
+                            <span class="item-price">250₽</span>
+                        </div>
+                        <button class="order-btn">Заказать</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="drinks" data-spice="mild" data-price="low" data-new="true">
+                    <div class="item-image">
+                        <img src="https://via.placeholder.com/300x200/00BCD4/FFFFFF?text=Матча+Латте" alt="Матча Латте">
+                        <div class="item-badge new">🆕 Напиток</div>
+                    </div>
+                    <div class="item-content">
+                        <h3 class="item-title">Матча Латте</h3>
+                        <p class="item-description">Традиционный японский зеленый чай с молоком</p>
+                        <div class="item-meta">
+                            <span class="item-spice">-</span>
+                            <span class="item-price">290₽</span>
+                        </div>
+                        <button class="order-btn">Заказать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Home -->
+    <section class="back-home">
+        <div class="container">
+            <a href="index.html" class="back-btn">
+                <span>←</span> Вернуться на главную
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-icon small">
+                        <img src="images/logo.png" alt="KONO" class="logo-image">
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <a href="menu.html">Меню</a>
+                    <a href="reviews.html">Отзывы</a>
+                    <a href="https://pay.sbtips.ru/t/1000022100" target="_blank" rel="noopener noreferrer">Чаевые</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 KONO. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="menu.js"></script>
+</body>
+</html>

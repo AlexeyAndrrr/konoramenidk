@@ -1,0 +1,29 @@
+{
+  "name": "kono-website",
+  "version": "1.0.0",
+  "description": "Современный сайт сети ресторанов KONO",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "echo 'Build completed'"
+  },
+  "keywords": [
+    "kono",
+    "restaurant",
+    "website",
+    "landing"
+  ],
+  "author": "KONO Team",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

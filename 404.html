@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница не найдена - KONO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .error-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--kono-light-yellow), var(--kono-beige));
+            padding: 20px;
+        }
+        
+        .error-content {
+            text-align: center;
+            max-width: 600px;
+            background: var(--kono-white);
+            padding: 60px 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .error-icon {
+            font-size: 8rem;
+            margin-bottom: 30px;
+            animation: bounce 2s infinite;
+        }
+        
+        .error-logo {
+            width: 120px;
+            margin: 0 auto 30px;
+        }
+        
+        .error-logo img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .error-title {
+            font-family: 'Pribambas', cursive;
+            font-size: 3rem;
+            color: var(--kono-orange);
+            margin-bottom: 20px;
+        }
+        
+        .error-message {
+            font-size: 1.2rem;
+            color: var(--kono-gray);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        
+        .error-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .error-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .error-btn.primary {
+            background: var(--kono-orange);
+            color: var(--kono-white);
+            box-shadow: 0 5px 15px rgba(232, 92, 28, 0.3);
+        }
+        
+        .error-btn.secondary {
+            background: var(--kono-blue);
+            color: var(--kono-white);
+            box-shadow: 0 5px 15px rgba(31, 77, 145, 0.3);
+        }
+        
+        .error-btn:hover {
+            transform: translateY(-3px);
+        }
+        
+        .error-btn.primary:hover {
+            box-shadow: 0 8px 20px rgba(232, 92, 28, 0.4);
+        }
+        
+        .error-btn.secondary:hover {
+            box-shadow: 0 8px 20px rgba(31, 77, 145, 0.4);
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .error-title {
+                font-size: 2.5rem;
+            }
+            
+            .error-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .error-content {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-content">
+            <div class="error-logo">
+                <img src="images/logo.png" alt="KONO">
+            </div>
+            <div class="error-icon">🍜</div>
+            <h1 class="error-title">Упс! 404</h1>
+            <p class="error-message">
+                Похоже, что страница, которую вы ищете, заблудилась в лабиринте лапши! 
+                Возможно, она была съедена одним из наших персонажей.
+            </p>
+            <div class="error-actions">
+                <a href="/" class="error-btn primary">
+                    <span>🏠</span>
+                    На главную
+                </a>
+                <a href="/menu" class="error-btn secondary">
+                    <span>🍽️</span>
+                    Посмотреть меню
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
